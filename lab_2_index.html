@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Lab Exercise 2.1 Step 2.1 (add charset meta tag) -->
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <!-- Lab Exercise 2.1 Step 2.2 (add a title) -->
     <title>Rene Luna - Software Engineer in the making</title>
+
+    <!-- Lab Exercise 2.1 Step 2.3 (add description, keywords, author, viewport) -->
+    <meta name="description" content="Project website of Rene, A student of IOD 2025!." />
+    <meta name="keywords" content="Rene Luna, Software Engineer, Portfolio, Web Development, Projects, Coding" />
+    <meta name="author" content="Rene L" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="lab_2_style.css" />
+
+    <!-- Lab Exercise 2.1 Step IV (basic table styling) -->
+    <style>
+      table, th, td {
+        border: 1px solid black;
+      }
+    </style>
   </head>
   <body>
     <header class="site-header">
@@ -14,6 +29,8 @@
           <a href="#work">Projects</a>
           <a href="#about">About</a>
           <a href="#contact" class="cta">Contact</a>
+          <!-- Lab Exercise 2.1 Step VII (link to form page) -->
+          <a href="form.html">Form</a>
           <button
             id="navToggle"
             aria-controls="mainNav"
@@ -41,6 +58,54 @@
           </p>
         </div>
       </section>
+
+      <!-- Lab Exercise 2.1 Step III.1 (add 3 divs) -->
+      <div class="highlight-box">HTML</div>
+      <div class="highlight-box">CSS</div>
+      <div class="highlight-box">JavaScript</div>
+
+      <!-- Lab Exercise 2.1 Step III.2 (add 3 spans) -->
+      <span>Span One</span>
+      <span>Span Two</span>
+      <span>Span Three</span>
+
+      <!-- Lab Exercise 2.1 Step III.3 (add p and pre tags) -->
+      <p>
+        p represents paragraph     without preserving      spacing
+      </p>
+      <pre>
+Text in         a pre element
+is displayed in a fixed-width
+font, and it preserves
+both      spaces and
+line breaks
+      </pre>
+
+      <!-- Lab Exercise 2.1 Step III.4 (unordered list with nested list) -->
+      <ul>
+        <li>Item One</li>
+        <li>Item Two</li>
+        <li>Item Three</li>
+        <li>Item Four
+          <ul>
+            <li>Nested Item A</li>
+            <li>Nested Item B</li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- Lab Exercise 2.1 Step III.5 (ordered list) -->
+      <ol>
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+      </ol>
+
+      <!-- Lab Exercise 2.1 Step III.6 (wrap with article and headlines) -->
+      <h1>My HTML Learning Journey</h1>
+      <article>
+        <h2>Learning elements - div, span, p, pre, ul, li, ol, article</h2>
+      </article>
 
       <section id="work" class="work container">
         <h2 class="section-title">Selected Project</h2>
@@ -97,6 +162,54 @@
           </article>
         </div>
       </section>
+
+      <!-- Lab Exercise 2.1 Step IV (table inside a new article) -->
+      <article>
+        <h2>Learning tables</h2>
+        <table>
+          <thead>
+            <tr>
+              <th colspan="2">First and Second header</th>
+              <th>Third header</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="2">First cell - first row</td>
+              <td>Second cell - first row</td>
+              <td>Third cell - first row</td>
+            </tr>
+            <tr>
+              <td>Second cell - second row</td>
+              <td>Third cell - second row</td>
+            </tr>
+            <tr>
+              <td>First cell - third row</td>
+              <td>Second cell - third row</td>
+              <td>Third cell - third row</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+      <!-- Lab Exercise 2.1 Step V (images, video, audio) -->
+      <article>
+        <h2>Learning multimedia - images, video, audio</h2>
+        <img src="https://picsum.photos/400/400" alt="Random placeholder" width="200" height="200" />
+        <img src="images/Rene_Luna_Full_Body.JPG" alt="Full body photo of Rene Luna" width="200" height="200" />
+
+        <video controls width="250">
+          <source src="/assets/flower.webm" type="video/webm" />
+          Sorry, your browser doesn't support embedded videos.
+        </video>
+
+        <figure>
+          <audio controls src="/assets/t-rex-roar.mp3">
+            Your browser does not support the <code>audio</code> element.
+          </audio>
+          <figcaption>Audio example: T-Rex roar</figcaption>
+        </figure>
+      </article>
 
       <section id="about" class="about container">
         <h2 class="section-title">About</h2>
