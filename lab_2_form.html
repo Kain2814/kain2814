@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- Lab Exercise 2.1 Step 1 (add a title using the HTML title tag, below:)-->
+    <title>Rene Luna - Form Page</title>
+    <!-- Lab Exercise 2.1 Step 2 (Add metatags charset is set above title (the rest can be found below))-->
+    <meta name="description" content="Form page of Rene Luna, IOD Student 2025 project website." />
+    <meta name="keywords" content="Rene Luna, Form, HTML, IOD Project" />
+    <meta name="author" content="Rene Luna" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="lab_2_style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html">Rene Luna</a>
+        <nav class="main-nav" id="mainNav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="#form">Form</a>
+          <button
+            id="navToggle"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            class="nav-toggle"
+          >
+            ☰
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Lab Exercise 2.1 Forms Section -->
+      <section id="form" class="container">
+        <h1>Form Practice</h1>
+        <h2>Learning elements - form, input, label, select, option, button</h2>
+
+        <!-- Lab Exercise 2.1 Step 1 (Add a form with method and action attributes) -->
+        <form method="POST" action="http://127.0.0.1:5500/form">
+          <!-- Text inputs -->
+          <div>
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" />
+          </div>
+          <div>
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" />
+          </div>
+
+          <!-- Radio buttons -->
+          <div>
+            <p>Favorite coding language:</p>
+            <label><input type="radio" name="language" value="html" /> HTML</label>
+            <label><input type="radio" name="language" value="css" /> CSS</label>
+            <label><input type="radio" name="language" value="javascript" /> JavaScript</label>
+          </div>
+
+          <!-- Checkboxes -->
+          <div>
+            <p>Types of vehicles you own:</p>
+            <label><input type="checkbox" name="vehicle" value="car" /> Car</label>
+            <label><input type="checkbox" name="vehicle" value="bike" /> Bike</label>
+            <label><input type="checkbox" name="vehicle" value="boat" /> Boat</label>
+          </div>
+
+          <!-- Dropdown -->
+          <div>
+            <label for="carBrand">Choose your car brand:</label>
+            <select id="carBrand" name="carBrand">
+              <option value="ford">Ford</option>
+              <option value="toyota">Toyota</option>
+              <option value="honda">Honda</option>
+            </select>
+          </div>
+
+          <!-- Submit button -->
+          <button type="submit">Submit form</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Rene Luna All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

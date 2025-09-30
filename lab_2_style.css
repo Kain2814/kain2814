@@ -1,229 +1,351 @@
-/* ==============================
-   Color Variables
-   ============================== */
-:root {
-  --bg-color: #ffffff;       /* white background */
-  --text-color: #111111;     /* near-black text */
-  --accent-color: #00ffff;   /* cyan */
-  --accent-alt: #87ceeb;     /* sky blue */
-  --dark-bg: #000000;        /* black */
-  --light-bg: #ffffff;
+/* =======================================================
+   Lab 2 - CSS Basics
+   Color scheme: cyan, white, black, sky blue
+======================================================= */
+
+/* --------------------------
+   Selectors and combinators
+--------------------------- */
+
+/* Lab 2 Step 1: type selector - article */
+article {
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid black;
 }
 
-/* ==============================
-   General Styles
-   ============================== */
-* {
+/* Lab 2 Step 2: class selector */
+.style-me1 {
+  color: red;
+}
+
+/* Lab 2 Step 3: id selector */
+#style-me2 {
+  color: blue;
+}
+
+/* Lab 2 Step 4: class + id selector */
+.style-me1#style-me2 {
+  color: purple;
+}
+
+/* Lab 2 Step 5: descendant combinator */
+.my-descendants-are-styled p {
+  background-color: red;
+}
+
+/* Lab 2 Step 6: child combinator */
+.my-children-are-styled > p {
+  background-color: lightgreen;
+}
+
+/* --------------------------
+   Box model and common properties
+--------------------------- */
+
+/* Lab 2 Step 7: box class */
+.box {
+  background-color: cyan;
+  margin: 20px;
+  padding: 20px;
+  width: 200px;
+  height: 200px;
+  border: 10px solid skyblue;
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  overflow: auto;
+  border-radius: 20px;
+  outline: 10px solid black;
+  background-image: url('./assets/images/img1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* --------------------------
+   Positioning
+--------------------------- */
+
+/* Lab 2 Step 8: absolute */
+.position-absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: cyan;
+}
+
+/* Lab 2 Step 9: relative */
+.position-relative {
+  position: relative;
+  background-color: skyblue;
+}
+
+/* Lab 2 Step 10: sticky */
+.position-sticky {
+  position: sticky;
+  top: 0;
+  background-color: cyan;
+}
+
+/* --------------------------
+   Styling text
+--------------------------- */
+
+.text-style {
+  color: cyan;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  text-align: left;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  text-transform: none;
+  text-decoration: none;
+}
+
+/* --------------------------
+   Styling links
+--------------------------- */
+
+/* Lab 2 Step 11: default links */
+a, a:link {
+  color: cyan;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Lab 2 Step 12: active/hover/focus */
+a:hover, a:active, a:focus {
+  color: skyblue;
+  text-decoration: underline;
+}
+
+/* Lab 2 Step 13: visited */
+a:visited {
+  color: purple;
+  font-style: italic;
+}
+
+/* --------------------------
+   calc()
+--------------------------- */
+
+.calc-style {
+  width: 100vw;
+  background-color: skyblue;
+}
+
+.calc-style {
+  width: calc(100vw - 100px);
+}
+
+.fixed-width-col {
+  width: 350px;
+  display: inline-block;
+}
+
+.fluid-col {
+  display: inline-block;
+  width: calc(100% - 350px);
+}
+
+/* =======================================================
+   Lab 3 - Flexbox
+======================================================= */
+
+/* --------------------------
+   Basic Flexbox
+--------------------------- */
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 10px;
+}
+
+.flex-item-1 {
+  flex: 1;
+  background-color: cyan;
+}
+
+.flex-item-2 {
+  flex: 2;
+  background-color: skyblue;
+}
+
+.flex-item-3 {
+  flex: 1;
+  background-color: black;
+  color: white;
+}
+
+.flex-item-4 {
+  flex: 3;
+  background-color: white;
+  color: black;
+}
+
+/* --------------------------
+   Centering with Flexbox
+--------------------------- */
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background-color: lightcyan;
+}
+
+/* --------------------------
+   Assigning leftover space
+--------------------------- */
+
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: cyan;
+  padding: 10px;
+}
+
+/* --------------------------
+   Wrapping items
+--------------------------- */
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.flex-basis-50 {
+  flex-basis: 50%;
+  background-color: skyblue;
+  color: black;
+  padding: 10px;
+  text-align: center;
+}
+
+/* --------------------------
+   Changing direction
+--------------------------- */
+
+.flex-direction-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-direction-row-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.flex-direction-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-direction-column-reverse {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+/* --------------------------
+   Flexbox for horizontal navigation
+--------------------------- */
+
+.flex-menu {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  background-color: black;
+  padding: 10px;
+}
+
+.flex-menu-center {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.flex-menu .faq {
+  order: 99;
+}
+
+.flex-menu a {
+  flex-grow: 1;
+  text-align: center;
+  color: cyan;
+  text-decoration: none;
+  padding: 5px 0;
+}
+
+.flex-menu a:hover {
+  color: skyblue;
+  text-decoration: underline;
 }
 
 body {
-  background: var(--bg-color);
-  color: var(--text-color);
-  font-family: "Segoe UI", Arial, sans-serif;
-  line-height: 1.6;
+  background-color: black;
+  color: white;
 }
 
-/* Layout helper */
-.container {
-  width: 90%;
-  max-width: 1100px;
+section, header, footer, article {
+  background-color: #111;
+  color: white;
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+/* Profile image styling */
+.about-image img {
+  border-radius: 50%;
+  max-width: 300px;
+  height: auto;
+  display: block;
   margin: 0 auto;
 }
 
-/* Links */
-a {
-  color: var(--accent-color);
-  text-decoration: none;
-  transition: color 0.3s;
-}
-a:hover {
-  color: var(--accent-alt);
-}
-
-/* Section titles */
-.section-title {
-  font-size: 2rem;
-  color: var(--accent-color);
-  border-bottom: 3px solid var(--accent-alt);
-  display: inline-block;
-  margin-bottom: 1.5rem;
-}
-
-/* ==============================
-   Header
-   ============================== */
-.site-header {
-  background: var(--dark-bg);
-  padding: 1rem 0;
-}
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.logo {
-  color: var(--accent-color);
-  font-weight: bold;
-  font-size: 1.5rem;
-}
-.main-nav a {
-  margin-left: 1.5rem;
-  color: var(--light-bg);
-}
-.main-nav a.cta {
-  background: var(--accent-color);
-  color: var(--dark-bg);
-  padding: 6px 12px;
-  border-radius: 4px;
-}
-.main-nav a.cta:hover {
-  background: var(--accent-alt);
-}
-
-/* Mobile menu toggle */
-.nav-toggle {
-  display: none;
-}
-
-/* ==============================
-   Hero Section
-   ============================== */
-.hero {
-  background: var(--dark-bg);
-  color: var(--light-bg);
-  padding: 6rem 0;
-  text-align: center;
-}
-.hero-title {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: var(--accent-color);
-}
-.hero-sub {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-}
-.hero .btn {
-  background: var(--accent-color);
-  color: var(--dark-bg);
-  padding: 12px 24px;
-  border-radius: 5px;
-  font-weight: bold;
-}
-.hero .btn:hover {
-  background: var(--accent-alt);
-}
-
-/* ==============================
-   Projects Section
-   ============================== */
-.work {
-  padding: 4rem 0;
-}
-.projects-grid {
-  display: grid;
-  gap: 2rem;
-}
-.project-card {
-  background: var(--light-bg);
-  border: 1px solid #eaeaea;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-}
-.project-media img {
-  width: 100%;
-  display: block;
-}
-.project-info {
-  padding: 1rem;
-}
-.project-info h3 {
-  color: var(--accent-color);
-  margin-bottom: 0.5rem;
-}
-.project-link {
-  font-weight: bold;
-}
-
-/* ==============================
-   About Section
-   ============================== */
-.about {
-  padding: 4rem 0;
-}
-.about-grid {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-}
-.about-text p {
-  margin-bottom: 1rem;
-}
-.about-text ul {
-  list-style: none;
-}
-.about-text li::before {
-  content: "• ";
-  color: var(--accent-color);
-}
-.about-image img {
-  max-width: 300px;
-  border-radius: 12px;
-  border: 3px solid var(--accent-color);
-}
-
-/* ==============================
-   Contact Section
-   ============================== */
-.contact {
-  padding: 4rem 0;
-  text-align: center;
-}
-.contact p {
-  margin-bottom: 1rem;
-}
-.contact .btn {
-  background: var(--accent-color);
-  color: var(--dark-bg);
-  padding: 12px 24px;
-  border-radius: 5px;
-  font-weight: bold;
-}
-.contact .btn:hover {
-  background: var(--accent-alt);
-}
-
-/* ==============================
-   Footer
-   ============================== */
-.site-footer {
-  background: var(--dark-bg);
-  color: var(--light-bg);
-  text-align: center;
-  padding: 1rem 0;
-}
-.site-footer p {
-  font-size: 0.9rem;
-}
-
-/* ==============================
-   Responsive Design
-   ============================== */
-@media (max-width: 768px) {
-  .about-grid {
-    grid-template-columns: 1fr;
+/* Responsive adjustments for mobile devices */
+@media only screen and (max-width: 768px) {
+  .hero-inner {
+    flex-direction: column;
     text-align: center;
   }
+
+  .projects-grid {
+    flex-direction: column;
+  }
+
+  h1.hero-title {
+    font-size: 2rem;
+  }
+
+  h2.section-title {
+    font-size: 1.5rem;
+  }
+
+  p, .project-blurb {
+    font-size: 1rem;
+  }
+
+  .about-grid {
+    flex-direction: column;
+    text-align: center;
+  }
+
   .about-image img {
-    margin: 0 auto;
+    max-width: 80%;
+  }
+
+  .btn.large {
+    width: 100%;
+    margin-top: 10px;
   }
 }
