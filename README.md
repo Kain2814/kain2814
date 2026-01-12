@@ -1,12 +1,5 @@
-## Hey everyone! :D 
-
-I'm currently in school for software engineering
-This is supposed to be like a resume website (hopefully)
-It is a class project and one I will be devoloping over time as I grow even after school.
-
-Currently I am familiarizing myself with more advanced JS functions and intro to python
-
-I have also been really interested in bot learning and creating my own chatbot.
+## This is Kain, a software developer with a geeky side, 
+learning to apply developer skills to his passion of TTRPG's and App Development
 <!--
 **Kain2814/kain2814** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
